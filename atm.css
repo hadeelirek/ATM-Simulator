@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-size: large;
+}
+
+#atm-container {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+#mode-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#atm,
+#withdraw-content,
+#deposit-content,
+#balance-info {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode button {
+    background-color: #eee;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+button:hover {
+    color: blue;
+    background-color: gray;
+    font-size: large;
+}

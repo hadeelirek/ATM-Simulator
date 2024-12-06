@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atm.css">
+    <title>ATM Simulator</title>
+</head>
+
+<body class="light-mode">
+    <div id="atm-container">
+        <h1>ATM Simulator</h1>
+        <hr>
+        <div id="mode-toggle">
+            <button id="mode-button" onclick="toggleMode()">
+                Switch to Dark Mode
+            </button>
+        </div>
+
+
+
+
+
+        <div id="atm">
+            <h2>ATM</h2>
+            <div>
+                <p>Welcome to the ATM. Please enter your account number and PIN.</p>
+            </div>
+            <div>
+                <label for="accountNo">Enter your account number:</label>
+                <input type="number" id="accountNo" placeholder="Account Number">
+            </div>
+            <div>
+                <label for="pin">Enter your PIN:</label>
+                <input type="number" id="pin" placeholder="PIN">
+            </div>
+            <div>
+                <button type="button" onclick="submitPassword()">Submit</button>
+            </div>
+            <div id="error-message" style="color: red; display: none;"></div>
+        </div>
+        <hr>
+
+
+
+
+
+        <div id="atm-buttons" style="display: none;">
+            <p id="greeting"></p>
+            <button onclick="goToPage('withdraw')">Withdraw</button>
+            <button onclick="goToPage('deposit')">Deposit</button>
+            <button onclick="goToPage('balance')">Balance</button>
+            <button onclick="goToPage('atm')">Log out</button>
+        </div>
+
+
+
+
+
+        <div id="withdraw" style="display: none;">
+            <h2>Withdraw Money</h2>
+            <label for="withdrawal_amount">
+                Please specify the withdrawal amount
+            </label>
+            <br>
+            <input id="withdrawal_amount" type="number"><br>
+            <button onclick="CheckAmount()">Check</button><br>
+            <p id="error"></p>
+            <br>
+
+            <div id="withdrawInfo" style="display: none;">
+                <p>Available notes:</p>
+                <p id="notesstack"></p>
+                <br>
+
+                <button onclick="withdraw()">
+                    Confirm Withdraw
+                </button>
+            </div>
+            <button onclick="goToPage('atm-buttons')">Back to Main</button>
+            <button onclick="goToPage('atm')">Log out</button>
+        </div>
+
+
+
+
+
+        <div id="deposit" style="display: none;">
+            <h2>Deposit Money</h2>
+            <label for="amount">Enter amount to deposit:</label>
+            <input type="number" id="amount">
+            <button onclick="deposit()">Deposit</button>
+
+            <button onclick="goToPage('atm-buttons')">Back to Main</button>
+            <button onclick="goToPage('atm')">Log out</button>
+        </div>
+
+
+
+
+
+        <div id="balance" style="display: none;">
+            <h2>Check Balance</h2>
+            <p id="balance-info"></p>
+            <button onclick="goToPage('atm-buttons')">Back to Main</button>
+            <button onclick="goToPage('atm')">Log out</button>
+        </div>
+    </div>
+
+    <script src="atm.js"></script>
+
+</body>
+
+</html>
